@@ -123,6 +123,7 @@ const parcelSchema = new Schema(
   },
   {
     timestamps: true,
+    versionKey: false,
   }
 );
 
