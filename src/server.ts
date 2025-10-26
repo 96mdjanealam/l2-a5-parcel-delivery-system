@@ -2,7 +2,7 @@
 import { Server } from "http";
 import mongoose from "mongoose";
 import app from "./app";
-import { envVars } from "./app/config/env";
+import { envVars } from "./app/config/env.config";
 // import { connectRedis } from "./app/config/redis.config";
 // import { seedSuperAdmin } from "./app/utils/seedSuperAdmin";
 

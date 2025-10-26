@@ -11,6 +11,11 @@ export enum Role {
   USER = "USER",
 }
 
+export interface IAuthProvider {
+    provider: "credentials" | "google";
+    providerId: string;
+}
+
 export interface IUser {
   _id?: Types.ObjectId;
   name: string;
@@ -18,10 +23,12 @@ export interface IUser {
   password: string;
   phone?: string;
   address?: string;
+  
   isDeleted?: boolean;
   isActive?: IsActive;
   parcels?: Types.ObjectId[];
   role: Role;
   createdAt?: Date;
   updatedAt?: Date; 
+  auths?: IAuthProvider[]; // Made optional to match Zod schema
 }
